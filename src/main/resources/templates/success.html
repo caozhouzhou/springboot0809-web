@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<!--导入命名空间，可以使用thymeleaf语法 -->
-<html lang="en" xmlns:th=" http: //www. thymeleaf. org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>成功页面</title>
 </head>
 <body>
     <div>成功！</div>
+    <!--导入命名空间，可以使用thymeleaf语法 xmlns:th="http://www.thymeleaf.org"-->
     <!--th:text改变元素里面的文本内容的。直接访问，就显示原本的内容 -->
     <div th:text="${hello}">成功！</div>
+
+    <br>
+    <div th:text="${hello}">成功！</div>
+    <div th:utext="${hello}">成功！</div>
+
+    <!--th:each每次遍历都会生成当前标签，3个h4 -->
+    <h4 th:text="${user}" th:each="user:${users}"></h4>
+
+    <hr>
+    <h4>
+        <span th:each="user:${users}">[[${user}]]</span>
+    </h4>
+
 </body>
 </html>
