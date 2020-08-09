@@ -19,9 +19,19 @@
     </properties>
 
     <dependencies>
+        <!--引入web模块  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 引入jquery-webjar -->
+        <!-- 项目启动后，端口8080，则访问路径http://localhost:8080/webjars/jquery/3.5.1/jquery.js -->
+        <!--具体可通过webMvc的自动配置查找 -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.5.1</version>
         </dependency>
 
         <dependency>
